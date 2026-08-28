@@ -19,6 +19,7 @@ body {
   font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text-h);
+  overflow-x: hidden;
 }
 
 /* Smooth background transitions for live preview */
@@ -674,6 +675,19 @@ footer {
   .skills-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .section {
+    padding: 90px 25px;
+  }
+
+  .about-grid,
+  .contact-content {
+    gap: 40px;
+  }
+
+  .contact-text h3 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -703,6 +717,10 @@ footer {
     font-size: 22px;
   }
 
+  .hero-description {
+    line-height: 1.65;
+  }
+
   .section {
     padding: 80px 20px;
   }
@@ -722,11 +740,35 @@ footer {
     flex-direction: column;
   }
 
+  .experience-card,
+  .project-card,
+  .stat,
+  .skill-card,
+  .education-card,
+  .certification-card {
+    padding: 22px;
+  }
+
+  .experience-card h3,
+  .project-card h3 {
+    font-size: 21px;
+  }
+
+  .contact-text h3 {
+    font-size: 27px;
+  }
+
+  .code-window pre {
+    padding: 18px;
+    font-size: 12px;
+  }
+
   .hero-buttons {
     flex-direction: column;
   }
 
   .btn {
     justify-content: center;
+    width: 100%;
   }
 }
