@@ -19,7 +19,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
         >
-           <span>Amit Korani</span>
+          <span>Amit Korani</span>
         </motion.h1>
 
         <motion.h2
@@ -49,9 +49,9 @@ function Hero() {
           </a>
 
           <a
-            href="/AMIT_KORANI_CVAug.pdf"
-            download="Amit_Korani_CV.pdf"
-            className="btn secondary"
+            href="/amit-portfolio/AMIT_KORANI_CVAug.pdf"
+            download="AMIT_KORANI_CV.pdf"
+            className="btn btn-secondary"
           >
             Download CV
           </a>
