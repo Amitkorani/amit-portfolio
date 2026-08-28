@@ -17,6 +17,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
 
+        <a href="#home" className="logo" aria-label="Portfolio home">
+          Portfolio<span>.</span>
+        </a>
 
         <div className={`nav-links ${open ? "active" : ""}`}>
           {links.map(([name, id]) => (

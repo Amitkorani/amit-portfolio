@@ -97,6 +97,7 @@ a {
 }
 
 .logo {
+  display: none;
   font-size: 28px;
   font-weight: 800;
 }
@@ -154,6 +155,7 @@ a {
 
 .hero {
   min-height: 100vh;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 
@@ -627,6 +629,12 @@ footer {
 
 @media (max-width: 850px) {
 
+  .logo {
+    display: block;
+    position: absolute;
+    left: 25px;
+  }
+
   .nav-links {
     position: absolute;
     top: 75px;
@@ -669,6 +677,23 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+  .theme-preview {
+    right: 10px;
+    bottom: 10px;
+    max-width: calc(100vw - 20px);
+  }
+
+  .hero {
+    gap: 40px;
+    padding: 105px 20px 60px;
+  }
+
+  .hero-content,
+  .hero-card,
+  .code-window {
+    min-width: 0;
+  }
 
   .hero h1 {
     font-size: 55px;
