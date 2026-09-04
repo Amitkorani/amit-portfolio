@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>AK portfolio logo</title>
+  <defs>
+    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B3D91"/>
+      <stop offset="1" stop-color="#08BCEB"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="#07111f" stroke="url(#ring)" stroke-width="3"/>
+  <path d="M17 45 29.5 18l12.8 27M22 34h15" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="m37 29 10-11M38 30l11 15" fill="none" stroke="#08BCEB" stroke-linecap="round" stroke-width="5"/>
+</svg>

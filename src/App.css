@@ -71,12 +71,12 @@ a {
 }
 
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 1000;
   background: var(--card-bg);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(1px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -88,14 +88,20 @@ a {
   
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
 }
 
 .logo {
-  display: none;
-  font-size: 28px;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
 }
 
 .logo span,

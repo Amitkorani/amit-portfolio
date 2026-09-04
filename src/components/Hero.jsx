@@ -100,10 +100,17 @@ function Hero() {
   role: "Frontend Developer",
   experience: "4+ Years",
   stack: [
+    "HTML",
+    "CSS",
+    "Bootstrap",
     "React.js",
     "JavaScript",
     "Node.js",
-    "Flutter"
+    "Flutter",
+    "Flow Chart",
+    "Postman Collection",
+    "Testing",
+    "Scrum Master"
   ],
   focus: "Performance & UI"
 };`}

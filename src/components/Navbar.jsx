@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImage from "../assets/logo.svg";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ function Navbar() {
       <div className="nav-container">
 
         <a href="#home" className="logo" aria-label="Portfolio home">
-          Portfolio<span>.</span>
+          <img src={logoImage} alt="Amit Korani Portfolio logo" />
         </a>
 
         <div className={`nav-links ${open ? "active" : ""}`}>
