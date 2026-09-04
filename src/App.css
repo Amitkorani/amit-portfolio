@@ -321,9 +321,17 @@ a {
 .code-header {
   padding: 15px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.code-header span {
+.code-dots {
+  display: flex;
+  align-items: center;
+}
+
+.code-dots span {
   display: inline-block;
   width: 11px;
   height: 11px;
@@ -332,7 +340,14 @@ a {
   margin-right: 7px;
 }
 
+.code-language {
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
 .code-window pre {
+  min-height: 385px;
   padding: 25px;
   color: var(--accent);
   line-height: 1.7;

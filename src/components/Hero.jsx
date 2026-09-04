@@ -1,7 +1,61 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, Download, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
+const codeCards = [
+  {
+    language: "Frontend + Backend",
+    code: `const developer = {
+  frontend: [
+    "React.js", "JavaScript", "HTML5", "CSS3",
+    "Flutter", "Tailwind CSS", "Bootstrap", "Responsive UI"
+  ],
+  backend: [
+    "Node.js", "ASP.NET", "REST APIs", "JWT",
+    "OAuth", "2FA", "Secure API Development"
+  ]
+};`
+  },
+  {
+    language: "Tools + Database",
+    code: `const technicalTools = {
+  devops: [
+    "GitHub Actions", "CI/CD", "NPM", "Yarn",
+    "Webpack", "Postman", "IIS Server"
+  ],
+  database: [
+    "MySQL", "MSSQL", "PostgreSQL",
+    "Database Design", "Performance Tuning"
+  ]
+};`
+  },
+  {
+    language: "Agile + AI + QA",
+    code: `const workflow = {
+  agile: ["Agile", "Scrum", "Sprint Planning",
+    "Sprint Reviews", "Retrospectives", "Scrum Ceremonies"],
+  ai: ["GitHub Copilot", "Claude Code", "Gemini",
+    "Cursor", "ChatGPT"],
+  quality: ["Technical Documentation", "API Design Docs",
+    "Flowcharts / UML", "Postman Collections",
+    "API Testing", "Manual Testing"]
+};`
+  }
+];
+
 function Hero() {
+  const [activeCard, setActiveCard] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCard((currentCard) => (currentCard + 1) % codeCards.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const card = codeCards[activeCard];
+
   return (
     <section id="home" className="hero">
 
@@ -86,37 +140,26 @@ function Hero() {
 
       <div className="hero-card">
 
-        <div className="code-window">
+        <motion.div
+          className="code-window"
+          key={card.language}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35 }}
+        >
 
           <div className="code-header">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div className="code-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span className="code-language">{card.language}</span>
           </div>
 
-          <pre>
-            {`const developer = {
-  name: "Amit Korani",
-  role: "Frontend Developer",
-  experience: "4+ Years",
-  stack: [
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "React.js",
-    "JavaScript",
-    "Node.js",
-    "Flutter",
-    "Flow Chart",
-    "Postman Collection",
-    "Testing",
-    "Scrum Master"
-  ],
-  focus: "Performance & UI"
-};`}
-          </pre>
+          <pre>{card.code}</pre>
 
-        </div>
+        </motion.div>
 
       </div>
 
