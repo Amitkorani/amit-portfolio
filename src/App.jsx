@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
-import ThemePreview from "./components/ThemePreview";
 
 import "./App.css";
 
@@ -15,8 +14,6 @@ function App() {
   return (
     <>
       <Navbar />
-
-      <ThemePreview />
 
       <main>
         <Hero />

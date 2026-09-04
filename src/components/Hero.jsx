@@ -65,11 +65,18 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn profile"
+            data-tooltip="LinkedIn profile"
           >
             <ExternalLink />
           </a>
 
-          <a href="https://github.com/Amitkorani" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+          <a
+            href="https://github.com/Amitkorani"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub profile"
+            data-tooltip="GitHub profile"
+          >
             <ExternalLink />
           </a>
 
